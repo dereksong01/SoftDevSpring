@@ -1,20 +1,21 @@
+// Derek Song
+// SoftDev2 pd8
+// K00 -- I See a Red Door
+// 2019 - 01 - 30
+
 var c = document.getElementById("slate");
 var ctx = c.getContext("2d");
 var dot = true;
 
 var clear = function(e) {
-  ctx.clearRect(0, 0, 400, 400);
+  ctx.clearRect(0, 0, c.width, c.height);
 };
 
-var rect = function (e) {
-  var x = e.offsetX;
-  var y = e.offsetY;
+var rect = function (x, y) {
   ctx.fillRect(x, y, 40, 40)
 }
 
-var circ = function (e) {
-  var x = e.offsetX;
-  var y = e.offsetY;
+var circ = function (x, y) {
   ctx.fillRect(x, y, 1, 1)
 }
 
@@ -29,10 +30,16 @@ document.getElementById("dot").onclick = function() {
 
 var draw = function (e) {
   if (dot) {
-    circ(e);
+    var x = e.offsetX;
+    var y = e.offsetY;
+    circ(x, y);
+    dot = false;
   }
   else {
-    rect(e);
+    var x = e.offsetX;
+    var y = e.offsetY;
+    rect(x, y);
+    dot = true;
   }
 }
 
