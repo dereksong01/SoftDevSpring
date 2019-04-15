@@ -6,9 +6,9 @@
 l1 = []
 
 for x in range(5):
-    l1.append(22*x)
+    l1.append(22 * x)
 print(l1)
-print([22*x for x in range(5)])
+print([22 * x for x in range(5)])
 
 l2 = []
 
@@ -40,7 +40,7 @@ def divisor(x):
         if x % (i +1 ) == 0:
             l6.append(i + 1)
     print(l6)
-    
+
 divisor(15)
 
 def divisor2(x):
