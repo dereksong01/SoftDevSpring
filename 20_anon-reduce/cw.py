@@ -1,4 +1,7 @@
-# class work
+# Team robustPirates - Vincent Lin & Derek Song
+# Softdev pd8
+# K20 - Reductio ad Absurdum
+# 2019 - 4 - 18
 
 with open("book.txt", "r") as f:
     #print(f)
